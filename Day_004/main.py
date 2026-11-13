@@ -1,35 +1,49 @@
 #BUILDING ROCK, PAPER , SCISSORS  GAME
 import random
 
-choice = ["Rock","Paper","Scissors"]
+
+rock = r"""
+    _______
+   /       \
+  |  ROCK   |
+   \_______/
+"""
+
+paper = r"""
+  _____________
+ |             |
+ |    PAPER    |
+ |_____________|
+"""
+
+scissors = r"""
+    \\  //
+     \\//
+     //\\
+    (o)(o)
+   SCISSORS
+"""
+
+
+game_images = [rock, paper, scissors]
+
 user_choice = int(input("What do you choose? Enter 0 for Rock, 1 for Paper or 2 for Scissors: "))
-computer_choice = random.choice(choice)
-if user_choice == 0 and computer_choice == "Rock":
-    print("It's a tie!")
+computer_choice = random.randint(0, 2)
 
-elif user_choice == 0 and computer_choice == "Scissors":
-    print("You win!")
+if 0 <= user_choice <= 2:
+    print("You chose:")
+    print(game_images[user_choice])
 
-elif user_choice == 0 and computer_choice == "Paper":
-    print("Computer wins!")
+    print("Computer chose:")
+    print(game_images[computer_choice])
 
-elif user_choice == 1 and computer_choice == "Rock":
-    print("You win!")
-
-elif user_choice == 1 and computer_choice == "Scissors":
-    print("Computer wins!")
-
-elif user_choice == 1 and computer_choice == "Paper":
-    print("It's a tie!")
-
-elif user_choice == 2 and computer_choice == "Rock":
-    print("Computer wins!")
-
-elif user_choice == 2 and computer_choice == "Scissors":
-    print("It's a tie!")
-
-elif user_choice == 2 and computer_choice == "Paper":
-    print("You win!")
-
+    if user_choice == computer_choice:
+        print("It's a tie!")
+    elif (user_choice == 0 and computer_choice == 2) or \
+         (user_choice == 1 and computer_choice == 0) or \
+         (user_choice == 2 and computer_choice == 1):
+        print("You win!")
+    else:
+        print("Computer wins!")
 else:
     print("Please enter a correct input")

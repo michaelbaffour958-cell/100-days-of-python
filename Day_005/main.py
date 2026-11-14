@@ -1,33 +1,14 @@
-# fruits = ["pear","mango","guava"]
-
-# for fruit in fruits:
-#     print(fruits)
-
-#Finding the total score
-# student_score = [143,135,167,123,134]
-# sum = 0   
-# for score in student_score:
-#     sum += score
-#     print(sum)
-# sum = 0 
-# for num in range(1,101):
-#     sum += num
-
-# print(sum)
+#CREATING A PASSWORD GENERATOR
+import random
 
 
-for num in range(1,101):
-    
-    if num % 3 == 0 and num % 5 == 0:
-        print("FizzBuzz")
+letter = list("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ")
+num = list("0123456789")
+symbol = list('!@#$%&*(),')
 
-    elif num % 5 == 0:
-        print("Buzz")
+password = ""
 
-    elif num % 3 == 0  :
-        print("Fizz")
-        
-    print(num)
-
-  
-    
+print("Welcome to the PyPassword Generator!")
+letter_input = int(input("How many letters will you like in your password?\n"))
+symbol_input = int(input("How many symbols will you like?\n"))
+number_input = int(input("How many numbers would you like?\n"))

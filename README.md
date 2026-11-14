@@ -8,3 +8,4 @@ Started: 6 November 2026
 | 2 | 07-Nov-26 | Tip Calculator | data types, type conversion, f-strings, math operators, rounding | data types, type conversion, f-strings, math operators, rounding |
 | 3 | 08-Nov-26 |Treasure Island | if / elif / else, comparison operators, logical operators (and, or, not), nested conditionals |
 | 4 | 13-Nov-26 | Rock, Paper, Scissors | lists and indexing, random module (randint), int() conversion, if / elif / else, logical operators (and, or), input validation |
+| 5 | 14-Nov-26 | Password Generator | for loops, range(), lists, random.choice(), string building with +=, f-strings, int() conversion, FizzBuzz and sum of scores practice |

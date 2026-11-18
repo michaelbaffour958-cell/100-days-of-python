@@ -8,16 +8,23 @@ user_input = input("Guess the letter of the word: ").lower()
 guess = user_input
 print(guess)
 
-for letter in chosen_word:
-    if letter == guess:
-        print("Right")
-    else:
-        print("Wrong")
 
-placeholder = []
+placeholder = ""
+word_length = len(chosen_word)
 
-for letter in chosen_word:
+for position in range(word_length):
     placeholder += "_"
 print(placeholder)
 
-    
+display = ''
+for letter in chosen_word:
+    if letter == guess:
+        display += guess
+    else:
+        display += "_"
+print(display)
+
+
+
+
+

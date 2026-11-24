@@ -1,5 +1,66 @@
 #Building Hangman
 import random
+
+HANGMAN = [
+    """
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========""",
+    """
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========""",
+    """
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========""",
+    """
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========""",
+    """
+  +---+
+  |   |
+  O   |
+ /|\\  |
+      |
+      |
+=========""",
+    """
+  +---+
+  |   |
+  O   |
+ /|\\  |
+ /    |
+      |
+=========""",
+    """
+  +---+
+  |   |
+  O   |
+ /|\\  |
+ / \\  |
+      |
+=========""",
+]
+
+
 d_list = ["aardvark", "baboon", "camel"]
 chosen_word = random.choice(d_list)
 print(chosen_word)
@@ -35,11 +96,16 @@ while not game_over:
     game_over = True
     print('You win.')
 
-if guess not in chosen_word:
+ if guess not in chosen_word:
    lives -= 1
    if lives == 0:
       game_over = True
       print("You lose.")
+
+
+ print(HANGMAN[lives])
+
+
 
 
 

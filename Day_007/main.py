@@ -1,5 +1,6 @@
 #Building Hangman
 import random
+import hangman_words
 
 HANGMAN = [
     """

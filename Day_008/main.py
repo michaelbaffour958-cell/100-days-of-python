@@ -13,3 +13,16 @@ def life_in_weeks(years):
     print(f'You have {weeks_left} weeks left.')
 
 life_in_weeks(27)
+
+
+#functions with more than one input
+def greet_with(name, location):
+    print(f"Hello {name}")
+    print(f"What is it like in {location}")
+greet_with("Michael", "Bomso")
+
+#positional and keyword argument
+def greet_with(name, location):
+    print(f'Hello {name}')
+    print(f'What is it like in {location}')
+greet_with(location = "Bomso", name = "Michael Baffour")
